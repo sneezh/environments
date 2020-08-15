@@ -1,47 +1,31 @@
 ---
-  - name: Ensure my productivity tools are installed
-    homebrew_cask:
-      name:
-        - 1password
-        - alfred
-        - bettertouchtool
-        - bluetoothconnector
-        - karabiner-elements
-        - bartender
-        - choosy
-        - google-chrome
-        - cleanmymac
-        - iina
-        - ilya-birman-typography-layout
-        - krisp
-        - loom
-        - notion
-        - permute
-        - protonvpn
-        - slack
-        - sketch
-        - skype
-        - transmission
-        - zoomus
-        - yandex
+- name: Ensure my productivity tools are installed
+  homebrew_cask:
+    name:
+      - google-chrome
+      - iina
+      - krisp
+      - loom
+      - notion
+      - slack
+      - skype
+      - zoomus
+      - microsoft-teams
 
-  - name: Ensure my streaming tools are installed
-    homebrew_cask:
-      name:
-        - obs
-        - loopback
-        - audio-hijack
-        - pretzel
+- name: Ensure my streaming tools are installed
+  homebrew_cask:
+    name:
+      - obs
 
-  - name: Reduce macos noise
-    osx_defaults:
-      key: "{{ item.key }}"
-      domain: "{{ item.domain }}"
-      value: "{{ item.value }}"
-    loop:
-      - domain: com.apple.systempreferences
-        key: AttentionPrefBundleIDs
-        value: 0
-      - domain: com.apple.dock
-        key: no-bouncing
-        value: TRUE
+- name: MacOS settings
+  osx_defaults:
+    key: "{{ item.key }}"
+    domain: "{{ item.domain }}"
+    value: "{{ item.value }}"
+  loop:
+    - domain: com.apple.systempreferences
+      key: AttentionPrefBundleIDs
+      value: 0
+    - domain: com.apple.dock
+      key: no-bouncing
+      value: TRUE

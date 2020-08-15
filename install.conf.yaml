@@ -4,36 +4,20 @@
 
 - clean: ['~']
 
-
 - create:
     - ~/.config
 
 - link:
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/f213: fish/f213
-    ~/.config/omf: fish/omf
-    ~/.config/karabiner: karabiner
-    ~/.vimrc: .vimrc
-    ~/.vim: vimrc
-    ~/.screenrc: .screenrc
-    ~/.gitconfig: .gitconfig
-    ~/.isort.cfg: .isort.cfg
-    ~/.editorconfig: .editorconfig
-    ~/.config/flake8: flake8
-    ~/.cookiecutterrc: cookiecutterrc
+    ~/.gitignore_global: dotfiles/.gitignore_global
+    ~/.gitconfig: dotfiles/.gitconfig
+    ~/.zshrc: dotfiles/.zshrc
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - mkdir -p ~/bin
-  - [./install-brew-stuff.sh, Installing homebew and essential utils]
-  - rm -Rf ~/.local/share/omf/
-  - curl -L https://get.oh-my.fish > /tmp/omf_install
-  - chmod +x /tmp/omf_install
-  - fish -c "/tmp/omf_install --noninteractive"
-  - rm /tmp/omf_install
-  - fish -c omf update
-  - command: ./run-ansible.sh
-    stdin: true
-    stdout: true
-    description: Poring software
-
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./install-brew-stuff.sh, Installing homebew and essential utils]
+    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh my zsh]
+    - command: ./run-ansible.sh
+      stdin: true
+      stdout: true
+      description: Poring software
+    - [./create-docker-machine.sh, Creating default docker-machine with virtualbox]

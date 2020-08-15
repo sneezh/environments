@@ -1,0 +1,8 @@
+[user]
+	name = Vladislav Abrashkin
+	email = isneezh@gmail.com
+[core]
+	excludesfile = /Users/vladislav/.gitignore_global
+	autocrlf = input
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/

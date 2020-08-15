@@ -1,48 +1,32 @@
 ---
-  - name: Ensure iterm2 is installed
-    homebrew_cask:
-      name: iterm2
+- name: Add required homebrew repos
+  homebrew_tap:
+    name: homebrew/cask-fonts
 
-  - name: Add required homebrew repos
-    homebrew_tap:
-      name: homebrew/cask-fonts
+- name: Ensure console utils are installed
+  homebrew:
+    name:
+      - bat
+      - exa
+      - git
+      - nmap
+      - telnet
+      - docker
+      - docker-compose
+      - docker-machine
+      - docker-machine-nfs
+      - mkcert
 
-  - name: Ensure console utils are installed
-    homebrew:
-      name:
-        - ansible-lint
-        - bat
-        - bfg
-        - exa
-        - circleci
-        - doctl
-        - git
-        - gnupg
-        - jsonlint
-        - hub
-        - fzf
-        - mosh
-        - mtr
-        - nmap
-        - pinentry-mac
-        - pwgen
-        - sloccount
-        - siege
-        - telnet
-        - ripgrep
-        - yamllint
-
-  - name: Ensure graphical utils are installed
-    homebrew_cask:
-      name:
-        - docker
-        - font-source-code-pro
-        - keybase
-        - ngrok
-        - visual-studio-code
-
-  - name: Ensure python and node version managers are installed
-    homebrew:
-      name:
-        - pyenv
-        - n
+- name: Ensure graphical utils are installed
+  homebrew_cask:
+    name:
+      - phpstorm
+      - virtualbox
+      - authy
+      - discord
+      - sublime-text
+      - the-unarchiver
+      - teamviewer
+      - microsoft-word
+      - microsoft-excel
+      - microsoft-powerpoint

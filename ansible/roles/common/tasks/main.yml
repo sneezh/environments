@@ -1,0 +1,10 @@
+---
+- name: Creates a tmp directory
+  file:
+    path: ./tmp
+    state: directory
+
+- name: Create a file called 'testfile.txt' with the content 'hello world'.
+  copy:
+    content: hello world
+    dest: ./tmp/testfile.txt

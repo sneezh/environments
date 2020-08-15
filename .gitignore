@@ -1,4 +1,2 @@
-fish/fishd*
-fisherman/await
-fish/fishfile
-karabiner/automatic_backups
+.idea
+ansible/tmp
