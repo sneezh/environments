@@ -11,6 +11,8 @@
       - skype
       - zoomus
       - microsoft-teams
+      - macpass
+      - authy
 
 - name: Ensure my streaming tools are installed
   homebrew_cask:
