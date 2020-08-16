@@ -73,11 +73,13 @@ source $ZSH/oh-my-zsh.sh
 export DOCKER_USER=$(id -u ${USER}):$(id -g ${USER})
 
 # Replace default console utils
-alias cat=bat
+alias ca=bat
 alias ls="exa"
 alias l="exa -lahF"
 
 alias dm=docker-machine
+alias dps="docker ps"
+alias dcps="docker-compose ps"
 
 # Eval default docker-machine
 eval $(dm env default)

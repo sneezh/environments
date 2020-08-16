@@ -15,6 +15,18 @@ cd .environments
 ./install
 ```
 
+## Warnings and errors
+
+If you have this
+```shell script
+(item={'domain': 'com.apple.systempreferences', 'key': 'AttentionPrefBundleIDs', 'value': 0}) => {"ansible_loop_var": "item", "changed": false, "item": {"domain": "com.apple.systempreferences", "key": "AttentionPrefBundleIDs", "value": 0}, "msg": "Type is not supported: dictionary"}
+```
+
+You should run in terminal
+```shell script
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+```
+
 ## Contents
 
 ### ZSH
