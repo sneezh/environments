@@ -1,34 +1,32 @@
 ---
-- name: Add required homebrew repos
-  homebrew_tap:
-    name: homebrew/cask-fonts
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
 
 - name: Ensure console utils are installed
-  homebrew:
+  apt:
     name:
       - bat
-      - exa
+      - zsh
+      - curl
       - git
       - nmap
       - telnet
       - docker
       - docker-compose
-      - docker-machine
-      - docker-machine-nfs
-      - mkcert
+    state: present
 
-- name: Ensure graphical utils are installed
-  homebrew_cask:
-    name:
-      - phpstorm
-      - goland
-      - virtualbox
-      - postman
-      - discord
-      - sublime-text
-      - the-unarchiver
-      - teamviewer
-      - microsoft-word
-      - microsoft-excel
-      - microsoft-powerpoint
-      - figma
+# todo:
+#- name: Ensure graphical utils are installed
+#  homebrew_cask:
+#    name:
+#      - virtualbox
+#      - postman
+#      - discord
+#      - sublime-text
+#      - the-unarchiver
+#      - teamviewer
+#      - microsoft-word
+#      - microsoft-excel
+#      - microsoft-powerpoint
+#      - figma

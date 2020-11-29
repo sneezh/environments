@@ -14,10 +14,11 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [sh ./install-brew-stuff.sh, Installing homebrew and essential utils]
-    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh my zsh]
+    - [sh install-ansible.sh, Installing ansible]
     - command: sh ./run-ansible.sh
       stdin: true
       stdout: true
       description: Poring software
-    - [sh ./create-docker-machine.sh, Creating default docker-machine with virtualbox]
+    - [sh install-zsh.sh, Installing oh my zsh]
+    - [ sh install-exa.sh, Installing exa (tool for replace "ls" command) ]
+#    - [sh ./create-docker-machine.sh, Creating default docker-machine with virtualbox]
