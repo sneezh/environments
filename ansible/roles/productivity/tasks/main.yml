@@ -4,7 +4,6 @@
     name:
       - google-chrome
       - iina
-      - krisp
       - loom
       - notion
       - slack
@@ -13,6 +12,9 @@
       - microsoft-teams
       - macpass
       - authy
+      - dozer
+      - eul
+      - deepl
 
 - name: Ensure my streaming tools are installed
   homebrew_cask:

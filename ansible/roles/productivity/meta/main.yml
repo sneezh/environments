@@ -3,6 +3,8 @@ dependencies:
   - role: geerlingguy.mas
     vars:
       mas_installed_apps:
+        - id: 907364780
+          name: Tomato One
         - id: 747648890
           name: Telegram
         - id: 409203825
@@ -13,3 +15,5 @@ dependencies:
           name: Keynote
         - id: 585829637
           name: Todoist
+        - id: 526298438
+          name: Lightshot Screenshot

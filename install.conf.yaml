@@ -16,6 +16,7 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [sh ./install-brew-stuff.sh, Installing homebrew and essential utils]
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh my zsh]
+    - [git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions]
     - command: sh ./run-ansible.sh
       stdin: true
       stdout: true
