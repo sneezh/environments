@@ -81,8 +81,6 @@ alias l="exa -lahF"
 alias dm=docker-machine
 alias dps="docker ps"
 alias dcps="docker-compose ps"
-alias vmutkon="VBoxManage startvm utkonos --type headless"
-alias vmutkoff="VBoxManage controlvm utkonos poweroff soft"
 
 # Eval default docker-machine
 eval $(dm env utkonos)

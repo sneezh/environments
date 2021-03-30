@@ -14,7 +14,8 @@
       - authy
       - dozer
       - eul
-      - deepl
+#      - deepl
+#      - reverso
 
 - name: Ensure my streaming tools are installed
   homebrew_cask:
