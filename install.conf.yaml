@@ -11,6 +11,8 @@
     ~/.gitignore_global: dotfiles/.gitignore_global
     ~/.gitconfig: dotfiles/.gitconfig
     ~/.zshrc: dotfiles/.zshrc
+    ~/.vimrc: dotfiles/.vimrc
+    ~/.ideavimrc: dotfiles/.ideavimrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

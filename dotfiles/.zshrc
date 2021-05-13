@@ -81,6 +81,8 @@ alias l="exa -lahF"
 alias dm=docker-machine
 alias dps="docker ps"
 alias dcps="docker-compose ps"
+alias vmon="VBoxManage startvm default --type headless"
+alias vmoff="VBoxManage controlvm default poweroff soft"
 
 # Eval default docker-machine
-eval $(dm env utkonos)
+eval $(dm env default)
