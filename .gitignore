@@ -1,2 +1,3 @@
 .idea
 ansible/tmp
+.DS_Store

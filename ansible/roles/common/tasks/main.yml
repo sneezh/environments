@@ -1,10 +1,7 @@
 ---
-- name: Creates a tmp directory
-  file:
-    path: ./tmp
-    state: directory
-
-- name: Create a file called 'testfile.txt' with the content 'hello world'.
-  copy:
-    content: hello world
-    dest: ./tmp/testfile.txt
+- name: Install common utils
+  homebrew_cask:
+    name:
+      - karabiner-elements
+      - obsidian
+      - alt-tab

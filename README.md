@@ -4,14 +4,10 @@ This is a repo for my environments.
 
 Bootstrap based on the [dotbot](https://github.com/anishathalye/dotbot).
 
-## Pre-Installation
-Install Git :)
-
 ## Installation
-
+1. Download repo
+2. Run inside folder
 ```sh
-git clone https://github.com/sneezh/environments
-cd .environments
 ./install
 ```
 

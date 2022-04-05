@@ -14,6 +14,9 @@ set smartindent
 set smarttab
 set softtabstop=4
 set ruler
-set rnu
 set undolevels=1000
 set backspace=indent,eol,start
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan

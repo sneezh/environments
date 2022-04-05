@@ -13,14 +13,15 @@
     ~/.zshrc: dotfiles/.zshrc
     ~/.vimrc: dotfiles/.vimrc
     ~/.ideavimrc: dotfiles/.ideavimrc
+    ~/.config/karabiner/assets/complex_modifications/cmd_to_switch_languge.json: karabiner/cmd_to_switch_languge.json
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [sh ./install-brew-stuff.sh, Installing homebrew and essential utils]
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh my zsh]
-    - [git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions]
+    - [git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions, Installing oh my zsh plugin]
+    - [rm ~/.zshrc]
     - command: sh ./run-ansible.sh
       stdin: true
       stdout: true
       description: Poring software
-    - [sh ./create-docker-machine.sh, Creating default docker-machine with virtualbox]
