@@ -65,7 +65,7 @@ plugins=(
   git
   bundler
   dotenv
-  osx
+  macos
   zsh-autosuggestions
 )
 

@@ -29,9 +29,6 @@
     value: "{{ item.value }}"
   loop:
     - domain: com.apple.systempreferences
-      key: AttentionPrefBundleIDs
-      value: 0
-    - domain: com.apple.systempreferences
       key: AppleFontSmoothing
       value: 0
     - domain: com.apple.dock

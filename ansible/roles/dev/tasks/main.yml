@@ -13,9 +13,9 @@
       - telnet
       - docker
       - docker-compose
-      - docker-machine
-      - docker-machine-nfs
       - mkcert
+      - go
+      - golangci-lint
 
 - name: Ensure graphical utils are installed
   homebrew_cask:
