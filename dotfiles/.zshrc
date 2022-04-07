@@ -77,3 +77,4 @@ export DOCKER_USER=$(id -u ${USER}):$(id -g ${USER})
 alias ca=bat
 alias ls="exa"
 alias l="exa -lahF"
+export PATH=/opt/homebrew/bin:$PATH
