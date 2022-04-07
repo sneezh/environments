@@ -9,7 +9,7 @@
       - slack
       - skype
       # - zoomus
-      - microsoft-teams
+      # - microsoft-teams
       - macpass
       - authy
       - dozer
