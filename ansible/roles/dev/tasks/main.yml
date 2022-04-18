@@ -16,6 +16,7 @@
       - mkcert
       - go
       - golangci-lint
+      - neovim
 
 - name: Ensure graphical utils are installed
   homebrew_cask:
