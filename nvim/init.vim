@@ -12,5 +12,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Editor config, for teamwork
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 

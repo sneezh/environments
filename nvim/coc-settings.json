@@ -1,0 +1,10 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "/Users/vladislav/go/bin/gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+}
