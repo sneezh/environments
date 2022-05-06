@@ -24,6 +24,8 @@ alias ca=bat
 alias ls="exa"
 alias l="exa -lahF"
 alias vi="nvim"
+alias nviconf="vi .config/nvim/init.vim"
+alias viconf="vi .vimrc"
 export PATH=/opt/homebrew/bin:$PATH
 
 

@@ -13,6 +13,7 @@ set shiftwidth=4
 set smartindent
 set smarttab
 set softtabstop=4
+set tabstop=4
 set ruler
 set undolevels=1000
 set backspace=indent,eol,start
@@ -20,3 +21,12 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+set termguicolors
+let g:go_debug_windows = {
+      \ 'vars':       'rightbelow 60vnew',
+      \ 'stack':      'rightbelow 10new',
+\ }
+
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
