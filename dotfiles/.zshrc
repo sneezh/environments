@@ -26,6 +26,13 @@ alias l="exa -lahF"
 alias vi="nvim"
 alias nviconf="vi .config/nvim/init.vim"
 alias viconf="vi .vimrc"
+
+# Git Alises
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+
 export PATH=/opt/homebrew/bin:$PATH
 
 
