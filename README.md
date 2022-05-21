@@ -17,6 +17,5 @@ Bootstrap based on the [dotbot](https://github.com/anishathalye/dotbot).
 ### ZSH
 The shell is [oh my zsh](https://ohmyz.sh/).
 
-### Docker Machine NFS
-
-After installing docker-machine based on virtualbox will run automatic
+### Keyboard patch
+Vortex Core RGB - [patch web-service](https://tsdo.in/much-programming-core/)
