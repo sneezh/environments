@@ -25,10 +25,14 @@ Plug 'SirVer/ultisnips'
 " project tree
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+
+" Git
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 " -------------------------------------------------------------
 
 let mapleader = ','
+set updatetime=100
 
 " finder
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -41,6 +45,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>a  :GoAlternate<cr>
+autocmd FileType go nmap <F8> :GoDebugContinue<cr>
+autocmd FileType go nmap <F9> :GoDebugBreakpoint<cr>
 
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
@@ -49,11 +55,12 @@ let g:go_highlight_methods = 1
 let g:go_highlight_types = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_format_strings = 1
-let g:go_highlight_extra_types = 1
+let g:go_highlight_extra_types = 0
 
 colorscheme darcula
 
 highlight goFunctionCall guifg=#B09D79
+highlight goBuiltins guifg=#FFC66D
 highlight goReceiverType guifg=#6FAFBD
 highlight goReceiverVar guifg=#4EADE5
 highlight goTypeName guifg=#A9B7C6
@@ -61,10 +68,34 @@ highlight goTypeConstructor guifg=#6FAFBD
 highlight goBuildComment guifg=#629755
 highlight goBuildDirectives guifg=#A9B7C6
 highlight Constant guifg=#CC7832
+highlight goTypeName guifg=#FFC66D
+" --------------------------------------------------------------
+
+" Highlighting Coc errors, warnings
+hi! link CocErrorSign ErrorSign
+hi! link CocWarningSign WarningSign
+hi! link CocInfoSign InfoSign
+hi! link CocHintSign HintSign
+hi! link CocErrorFloat Pmenu
+hi! link CocWarningFloat Pmenu
+hi! link CocInfoFloat Pmenu
+hi! link CocHintFloat Pmenu
+hi! link CocHighlightText IdentifierUnderCaret
+hi! link CocHighlightRead IdentifierUnderCaret
+hi! link CocHighlightWrite IdentifierUnderCaretWrite
+hi! link CocErrorHighlight CodeError
+hi! link CocWarningHighlight CodeWarning
+hi! link CocInfoHighlight CodeInfo
+hi! link CocHintHighlight CodeHint
+" -------------------------------------------------------------
+
+" Highlighting GitGlutter
+highlight GitGutterAdd    guibg=#384C38 guifg=#384C38 ctermfg=2
+highlight GitGutterChange guibg=#374752 guifg=#374752  ctermfg=3
+highlight GitGutterDelete guibg=#656E76 guifg=#656E76  ctermfg=1
 " -------------------------------------------------------------
 
 " nvim-tree
-
 lua <<EOF
 require'nvim-tree'.setup {
 	view = {
