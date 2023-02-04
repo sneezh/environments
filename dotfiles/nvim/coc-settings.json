@@ -1,7 +1,7 @@
 {
   "languageserver": {
     "go": {
-      "command": "/go/bin/gopls",
+      "command": "/home/ubuntu/go/bin/gopls",
       "rootPatterns": ["go.mod"],
       "trace.server": "verbose",
       "filetypes": ["go"]
