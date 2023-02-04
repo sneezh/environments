@@ -4,7 +4,7 @@
     name: homebrew/cask-fonts
 
 - name: Ensure console utils are installed
-  homebrew:
+  apt:
     name:
       - bat
       - exa
@@ -13,23 +13,7 @@
       - telnet
       - docker
       - docker-compose
-      - mkcert
       - go
       - golangci-lint
       - neovim
-
-- name: Ensure graphical utils are installed
-  homebrew_cask:
-    name:
-      - phpstorm
-      - goland
-      - postman
-      - discord
-      - sublime-text
-      - the-unarchiver
-      - teamviewer
-      - microsoft-word
-      - microsoft-excel
-      - microsoft-powerpoint
-      - figma
-      - iterm2
+      - fish

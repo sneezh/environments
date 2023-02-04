@@ -1,6 +1,0 @@
----
-- name: Install common utils
-  homebrew_cask:
-    name:
-      - karabiner-elements
-      - obsidian
