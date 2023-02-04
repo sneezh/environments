@@ -10,6 +10,10 @@ Bootstrap based on the [dotbot](https://github.com/anishathalye/dotbot).
 3. Run inside folder
 ```sh
 ./install
+
+nvim -c "PlugInstall"
+sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
+chsh -s /usr/local/bin/fish
 ```
 
 ## Contents

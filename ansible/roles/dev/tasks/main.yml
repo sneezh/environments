@@ -1,8 +1,4 @@
 ---
-- name: Add required homebrew repos
-  homebrew_tap:
-    name: homebrew/cask-fonts
-
 - name: Ensure console utils are installed
   apt:
     name:
@@ -13,7 +9,12 @@
       - telnet
       - docker
       - docker-compose
-      - go
-      - golangci-lint
       - neovim
       - fish
+
+- name: Ensure golang are installed
+  snap:
+    name:
+      - go
+      - golangci-lint
+    classic: true
