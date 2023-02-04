@@ -23,8 +23,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'SirVer/ultisnips'
 
 " project tree
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons' " for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -97,11 +97,11 @@ highlight GitGutterDelete guibg=#656E76 guifg=#656E76  ctermfg=1
 
 " nvim-tree
 lua <<EOF
-require'nvim-tree'.setup {
+require("nvim-tree").setup({
 	view = {
 		width = 60
 	}
-}
+})
 EOF
 
 let g:nvim_tree_git_hl = 1 
