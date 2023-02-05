@@ -13,6 +13,7 @@
     ~/.vimrc: dotfiles/.vimrc
     ~/.config/nvim: dotfiles/nvim
     ~/.config/fish: dotfiles/fish
+    ~/.config/omf: dotfiles/omf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
