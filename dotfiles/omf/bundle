@@ -1,2 +1,3 @@
 package fuck
+package fzf
 theme default
