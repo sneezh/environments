@@ -110,7 +110,14 @@ require'nvim-tree'.setup {
   view = {
 	width = 30,
   },
+  open_on_setup = true,
 }
+
+require'nvim-web-devicons'.setup {
+ color_icons = true;
+ default = true;
+}
+
 EOF
 
 let g:nvim_tree_git_hl = 1 
@@ -122,7 +129,7 @@ let g:nvim_tree_icon_padding = ' '
 let g:nvim_tree_symlink_arrow = ' >> ' 
 let g:nvim_tree_respect_buf_cwd = 1 
 let g:nvim_tree_create_in_closed_folder = 1 
-let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } 
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 }
 
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
