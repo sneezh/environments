@@ -60,6 +60,8 @@ let g:go_highlight_generate_tags = 1
 let g:go_highlight_format_strings = 1
 let g:go_highlight_extra_types = 0
 
+let g:UltiSnipsExpandTrigger="<C-K>"
+
 colorscheme darcula
 
 highlight goFunctionCall guifg=#B09D79
@@ -99,12 +101,16 @@ highlight GitGutterDelete guibg=#656E76 guifg=#656E76  ctermfg=1
 " -------------------------------------------------------------
 
 " nvim-tree
-lua <<EOF
-require("nvim-tree").setup({
-	view = {
-		width = 60
-	}
-})
+
+lua << EOF
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require'nvim-tree'.setup {
+  view = {
+	width = 30,
+  },
+}
 EOF
 
 let g:nvim_tree_git_hl = 1 
@@ -122,6 +128,11 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 " -------------------------------------------------------------
+" copilot
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")                                                                                             
+let g:copilot_no_tab_map = v:true
+
+" -------------------------------------------------------------
 
 " coc
 inoremap <silent><expr> <TAB>
@@ -134,6 +145,11 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 inoremap <silent><expr> <c-space> coc#refresh()
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
