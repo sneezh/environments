@@ -22,6 +22,9 @@ Plug 'doums/darcula'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'SirVer/ultisnips'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " project tree
 Plug 'nvim-tree/nvim-web-devicons' " for file icons
 Plug 'nvim-tree/nvim-tree.lua'

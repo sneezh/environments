@@ -1,3 +1,4 @@
 package fuck
 package fzf
 theme default
+theme rider
