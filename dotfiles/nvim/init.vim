@@ -38,20 +38,24 @@ Plug 'tpope/vim-dotenv'
 " fast motions using f F like behavior
 Plug 'easymotion/vim-easymotion'
 
+" comment/uncomment blocks and selections
+Plug 'preservim/nerdcommenter'
+
 call plug#end()
 " -------------------------------------------------------------
-
 nnoremap <SPACE> <Nop>
 let mapleader = ' '
 set updatetime=100
-
+" -------------------------------------------------------------
+" nerd commenter
+map <leader>/ <Plug>NERDCommenterToggle
+" -------------------------------------------------------------
 " finder
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " -------------------------------------------------------------
-
 " go-vim
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
@@ -69,7 +73,8 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_extra_types = 0
 
 let g:UltiSnipsExpandTrigger="<C-K>"
-
+" -------------------------------------------------------------
+" Highlighting golang
 colorscheme darcula
 
 highlight goFunctionCall guifg=#B09D79
@@ -83,7 +88,6 @@ highlight goBuildDirectives guifg=#A9B7C6
 highlight Constant guifg=#CC7832
 highlight goTypeName guifg=#FFC66D
 " --------------------------------------------------------------
-
 " Highlighting Coc errors, warnings
 hi! link CocErrorSign ErrorSign
 hi! link CocWarningSign WarningSign
@@ -101,13 +105,11 @@ hi! link CocWarningHighlight CodeWarning
 hi! link CocInfoHighlight CodeInfo
 hi! link CocHintHighlight CodeHint
 " -------------------------------------------------------------
-
 " Highlighting GitGlutter
 highlight GitGutterAdd    guibg=#384C38 guifg=#384C38  ctermfg=2
 highlight GitGutterChange guibg=#374752 guifg=#374752  ctermfg=3
 highlight GitGutterDelete guibg=#656E76 guifg=#656E76  ctermfg=1
 " -------------------------------------------------------------
-
 " nvim-tree
 
 lua << EOF
@@ -204,5 +206,13 @@ nmap <leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <leader>w <Plug>(easymotion-bd-w)
 nmap <leader>w <Plug>(easymotion-overwin-w)
+
+" Gif config
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 " -------------------------------------------------------------
