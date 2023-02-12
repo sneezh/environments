@@ -31,10 +31,18 @@ Plug 'nvim-tree/nvim-tree.lua'
 
 " Git
 Plug 'airblade/vim-gitgutter'
+
+" import .env file
+Plug 'tpope/vim-dotenv'
+
+" fast motions using f F like behavior
+Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 " -------------------------------------------------------------
 
-let mapleader = ','
+nnoremap <SPACE> <Nop>
+let mapleader = ' '
 set updatetime=100
 
 " finder
@@ -48,8 +56,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>a  :GoAlternate<cr>
-autocmd FileType go nmap <F8> :GoDebugContinue<cr>
-autocmd FileType go nmap <F9> :GoDebugBreakpoint<cr>
+autocmd FileType go nmap <leader>c :GoDebugContinue<cr>
+autocmd FileType go nmap <leader>b :GoDebugBreakpoint<cr>
 
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
@@ -95,7 +103,7 @@ hi! link CocHintHighlight CodeHint
 " -------------------------------------------------------------
 
 " Highlighting GitGlutter
-highlight GitGutterAdd    guibg=#384C38 guifg=#384C38 ctermfg=2
+highlight GitGutterAdd    guibg=#384C38 guifg=#384C38  ctermfg=2
 highlight GitGutterChange guibg=#374752 guifg=#374752  ctermfg=3
 highlight GitGutterDelete guibg=#656E76 guifg=#656E76  ctermfg=1
 " -------------------------------------------------------------
@@ -179,8 +187,22 @@ endfunction
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting selected code
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" -------------------------------------------------------------
+" Easy Motion
+
+" <Leader>f{char} to move to {char}
+map  <leader>f <Plug>(easymotion-bd-f)
+nmap <leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <eader>L <Plug>(easymotion-bd-jk)
+nmap <leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <leader>w <Plug>(easymotion-bd-w)
+nmap <leader>w <Plug>(easymotion-overwin-w)
 
 " -------------------------------------------------------------

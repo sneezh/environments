@@ -1,4 +1,5 @@
 set number
+set mouse=a
 set linebreak
 set showbreak=+++
 set textwidth=100
