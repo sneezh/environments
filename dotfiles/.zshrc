@@ -21,8 +21,7 @@ export DOCKER_USER=$(id -u ${USER}):$(id -g ${USER})
 
 # Replace default console utils
 alias ca=bat
-alias ls="exa"
-alias l="exa -lahF"
+alias l="ls -lah"
 alias vi="nvim"
 alias nviconf="vi ~/.config/nvim/init.vim"
 alias viconf="vi ~/.vimrc"

@@ -14,15 +14,13 @@
     ~/.vimrc: dotfiles/.vimrc
     ~/.ideavimrc: dotfiles/.ideavimrc
     ~/.config/karabiner/assets/complex_modifications/cmd_to_switch_languge.json: karabiner/cmd_to_switch_languge.json
-    ~/.config/nvim: dotfiles/.config/nvim
+    ~/.config/nvim: dotfiles/nvim
+    ~/.config/fish: dotfiles/fish
+    ~/.config/omf: dotfiles/omf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [sh ./install-brew-stuff.sh, Installing homebrew and essential utils]
-    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh my zsh]
-    - [git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions, Installing oh my zsh plugin]
-    - [git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k, Installing oh my zsh theme]
-    - [rm ~/.zshrc]
     - command: sh ./run-ansible.sh
       stdin: true
       stdout: true

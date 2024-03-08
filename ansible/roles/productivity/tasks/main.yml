@@ -2,18 +2,15 @@
 - name: Ensure my productivity tools are installed
   homebrew_cask:
     name:
-      - google-chrome
       - iina
       - loom
       - notion
       - slack
-      - skype
-      # - zoomus
-      # - microsoft-teams
-      - macpass
+      - zoom
+      # - acr
+      - 1password
       - authy
-      - dozer
-      - alt-tab
+      # - alt-tab
 #      - deepl
 #      - reverso
 
@@ -28,9 +25,6 @@
     domain: "{{ item.domain }}"
     value: "{{ item.value }}"
   loop:
-    - domain: com.apple.systempreferences
-      key: AppleFontSmoothing
-      value: 0
     - domain: com.apple.dock
       key: no-bouncing
       value: TRUE

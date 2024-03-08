@@ -7,12 +7,6 @@ dependencies:
           name: Tomato One
         - id: 747648890
           name: Telegram
-        - id: 409203825
-          name: Numbers
-        - id: 409201541
-          name: Pages
-        - id: 409183694
-          name: Keynote
         - id: 585829637
           name: Todoist
         - id: 526298438
