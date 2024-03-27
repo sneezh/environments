@@ -10,8 +10,6 @@
       - git
       - nmap
       - telnet
-      - docker
-      - docker-compose
       - mkcert
       - neovim
       - fish
@@ -31,3 +29,4 @@
       - raycast
       - jetbrains-toolbox
       - obsidian
+      - docker
